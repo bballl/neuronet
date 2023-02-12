@@ -5,9 +5,10 @@
     
     
     internal static float BulletLifeTime = 0.5f;
-    internal static int BulletSpeed = 70;
+    internal static int BulletSpeed = 10;
     internal static int BulletDefaultDamage = 5;
 
 
     internal static int AgentRedDefense = 10;
+    internal static float AgentRedSpeed = 14;
 }
