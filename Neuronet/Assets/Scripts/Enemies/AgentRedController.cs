@@ -1,13 +1,21 @@
 ﻿using UnityEngine;
 
-public class AgentRedController : ContactAttackEnemy
+public class AgentRedController : Enemy
 {
     private void Start()
     {
+        BasisInit();
+
+
         Speed = Data.AgentRedSpeed;
         Defense = Data.AgentRedDefense;
         
-        var rb = GetComponent<Rigidbody>();
-        EnemyMovement = new EnemyMovement(rb, transform, Speed);
+        
+        //EnemyMovement = new EnemyMovement(rb, transform, Speed);
+    }
+
+    private void FixedUpdate()
+    {
+        MoveToPlayer();
     }
 }

@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
     /// <summary>
     /// Трансформ игрока.
     /// </summary>
-    [SerializeField] Transform playerTransform;
+    [SerializeField] Transform characterTransform;
     [SerializeField] private Vector3 offset;
 
     private void Awake()
@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        transform.position = playerTransform.position + offset;
+        transform.position = characterTransform.position + offset;
     }
 
     /// <summary>
@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour
     /// </summary>
     private void Stop()
     {
-        playerTransform = transform;
+        characterTransform = transform;
         offset = Vector3.zero;
     }
 

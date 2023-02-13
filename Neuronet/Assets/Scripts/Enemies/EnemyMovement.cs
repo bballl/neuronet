@@ -18,9 +18,9 @@ public sealed class EnemyMovement
     }
 
     /// <summary>
-    /// Логика движения. Поворот к трансформу игрока, импульс твердому телу. 
+    /// Логика движения к игроку. Поворот к трансформу игрока, импульс твердому телу. 
     /// </summary>
-    internal void Move()
+    internal void MoveToPlayer()
     {
         enemyTransform.LookAt(playerTransform);
         rb.AddForce(enemyTransform.forward * Time.deltaTime * speed, ForceMode.Impulse);

@@ -7,9 +7,6 @@ public class BulletController : MonoBehaviour
         var rb = GetComponent<Rigidbody>();
         int speed = Data.BulletSpeed;
         rb.AddForce(transform.forward * speed, ForceMode.Impulse);
-        
-        //float delay = Data.BulletLifeTime;
-        //Invoke("DestroyBullet", delay);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -25,8 +22,5 @@ public class BulletController : MonoBehaviour
         particleSystem.Play();
     }
     
-    //private void DestroyBullet()
-    //{
-    //    Destroy(gameObject);
-    //}
+    
 }
