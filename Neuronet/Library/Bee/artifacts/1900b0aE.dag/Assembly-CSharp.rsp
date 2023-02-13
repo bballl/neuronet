@@ -358,6 +358,8 @@
 "Assets/Scripts/CharacterMovement.cs"
 "Assets/Scripts/Data.cs"
 "Assets/Scripts/Enemies/AgentRedController.cs"
+"Assets/Scripts/Enemies/AgentYellowBlueController.cs"
+"Assets/Scripts/Enemies/ContactAttackEnemy.cs"
 "Assets/Scripts/Enemies/EnemyMovement.cs"
 "Assets/Scripts/InputController.cs"
 "Assets/Scripts/PlayerController.cs"

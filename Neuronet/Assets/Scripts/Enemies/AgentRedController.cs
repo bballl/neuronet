@@ -1,39 +1,13 @@
-using UnityEngine;
+п»їusing UnityEngine;
 
-public class AgentRedController : MonoBehaviour
+public class AgentRedController : ContactAttackEnemy
 {
-    private EnemyMovement enemyMovement;
-    private int defense = Data.AgentRedDefense;
-    private float speed = Data.AgentRedSpeed;
-
     private void Start()
     {
-        var rb= GetComponent<Rigidbody>();
-        enemyMovement = new EnemyMovement(rb, transform, speed);
-    }
-
-    private void FixedUpdate()
-    {
-        enemyMovement.Move();
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("CharacterAmmo"))
-        {
-            DamageCalculation();
-        }
-    }
-
-    /// <summary>
-    /// Расчет и применение урона.
-    /// </summary>
-    private void DamageCalculation()
-    {
-        var damage = CharacterAmmoDamage.GetDamage();
-        defense -= damage;
+        Speed = Data.AgentRedSpeed;
+        Defense = Data.AgentRedDefense;
         
-        if (defense <= 0)
-            Destroy(gameObject);
+        var rb = GetComponent<Rigidbody>();
+        EnemyMovement = new EnemyMovement(rb, transform, Speed);
     }
 }

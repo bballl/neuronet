@@ -1,14 +1,17 @@
 ﻿internal struct Data
 {
-    internal static int CharacterSpeed = 5;
-    internal static float CharacterRotationSpeed = 10f;
-    
-    
-    internal static float BulletLifeTime = 0.5f;
-    internal static int BulletSpeed = 10;
-    internal static int BulletDefaultDamage = 5;
+    //персонаж
+    public static readonly int CharacterSpeed = 5;
+    public static readonly float CharacterRotationSpeed = 10f;
 
+    //оружие
+    public static readonly float BulletLifeTime = 0.5f;
+    public static readonly int BulletSpeed = 10;
+    public static readonly int BulletDefaultDamage = 5;
 
-    internal static int AgentRedDefense = 10;
-    internal static float AgentRedSpeed = 14;
+    //противники
+    public static readonly int AgentRedDefense = 10;
+    public static readonly float AgentRedSpeed = 16;
+    public static readonly int AgentYellowBlueDefense = 20;
+    public static readonly float AgentYellowBlueSpeed = 12;
 }

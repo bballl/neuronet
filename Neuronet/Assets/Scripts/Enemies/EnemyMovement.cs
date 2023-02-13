@@ -1,6 +1,6 @@
 using UnityEngine;
 
-internal sealed class EnemyMovement
+public sealed class EnemyMovement
 {
 
     private Rigidbody rb;
