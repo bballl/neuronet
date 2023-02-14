@@ -6,7 +6,7 @@ internal struct Data
     //персонаж
     public static readonly float CharacterRotationSpeed = 10f;
     public static readonly int CharacterSpeed = 5;
-    public static readonly int CharacterDefense = 100;
+    public static readonly int CharacterDefense = 1000;
 
     //оружие
     public static readonly float BulletLifeTime = 0.5f; //?
@@ -24,7 +24,7 @@ internal struct Data
     public static readonly int AgentYellowBlueContactDamage = 3;
     public static readonly int AgentYellowBlueExperience = 2;
 
-    public static readonly float AgentBlueRoseSpeed = 4f;
+    public static readonly float AgentBlueRoseSpeed = 5f;
     public static readonly int AgentBlueRoseDefense = 10;
     public static readonly int AgentBlueRoseContactDamage = 1;
     public static readonly int AgentBlueRoseExperience = 1;

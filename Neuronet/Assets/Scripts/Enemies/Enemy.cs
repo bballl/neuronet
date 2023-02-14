@@ -19,7 +19,7 @@ public abstract class Enemy : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player"))
         {
-            Observer.TakingDamage.Invoke(ContactDamage);
+            Observer.DamageReceived.Invoke(ContactDamage);
             Destroy(gameObject);
         }
     }
@@ -32,8 +32,6 @@ public abstract class Enemy : MonoBehaviour
         Rb = GetComponent<Rigidbody>();
         PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    
-    
 
     /// <summary>
     /// Логика движения к игроку. Поворот к трансформу игрока, импульс твердому телу. 
@@ -44,7 +42,6 @@ public abstract class Enemy : MonoBehaviour
         Rb.AddForce(transform.forward * Time.deltaTime * Speed, ForceMode.Impulse);
     }
 
-
     /// <summary>
     /// Расчет и применение полученного урона.
     /// </summary>
@@ -54,6 +51,10 @@ public abstract class Enemy : MonoBehaviour
         Defense -= damage;
 
         if (Defense <= 0)
+        {
+            Observer.ExperienceReceived.Invoke(Experience);
             Destroy(gameObject);
+        }
+            
     }
 }

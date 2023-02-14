@@ -18,17 +18,15 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         bulletStartParticleSystem = GetComponentsInChildren<ParticleSystem>();
         
-
         inputController = new InputController();
         characterMovement = new CharacterMovement(transform, rb);
 
-        Observer.TakingDamage += GetDamage;
-        
-        
+        Observer.DamageReceived += GetDamage;
+        Observer.ExperienceReceived += GetExperience;
     }
     void Update()
     {
-        characterMovement.Move();
+        characterMovement.Move(); //какой вариант лучше?
         Shooting();
     }
 
@@ -41,19 +39,24 @@ public class PlayerController : MonoBehaviour
             new CharacterShooting(startBulletPositionLeft, startBulletPositionRight, bulletStartParticleSystem);
     }
 
+    /// <summary>
+    /// Получение урона
+    /// </summary>
     private void GetDamage(int damage)
     {
-
-        Debug.Log($"Получен урон {damage}");
         CharacterAttributes.defense -= damage;
-        Debug.Log($"Текущая защита {CharacterAttributes.defense}");
+        Observer.UIDataUpdate.Invoke();
+    }
 
-
+    private void GetExperience(int experience)
+    {
+        CharacterAttributes.experience += experience;
+        Observer.UIDataUpdate.Invoke();
     }
 
     private void OnDestroy()
     {
-        Observer.TakingDamage -= GetDamage;
+        Observer.DamageReceived -= GetDamage;
     }
 
 }
