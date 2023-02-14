@@ -4,12 +4,12 @@ public class AgentYellowBlueController : Enemy
 {
     private void Start()
     {
-        Rb = GetComponent<Rigidbody>();
-        PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        BasisInit();
 
         Speed = Data.AgentYellowBlueSpeed;
         Defense = Data.AgentYellowBlueDefense;
-
+        ContactDamage= Data.AgentYellowBlueContactDamage;
+        Experience= Data.AgentYellowBlueExperience;
         
         //EnemyMovement = new EnemyMovement(rb, transform, Speed);
     }

@@ -10,7 +10,8 @@ public class AgentBlueRoseController : Enemy
 
         Speed = Data.AgentBlueRoseSpeed;
         Defense = Data.AgentBlueRoseDefense;
-
+        ContactDamage = Data.AgentBlueRoseContactDamage;
+        Experience = Data.AgentBlueRoseExperience;
 
         //EnemyMovement = new EnemyMovement(rb, transform, Speed);
     }

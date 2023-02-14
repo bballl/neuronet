@@ -352,10 +352,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Scripts/BulletController.cs"
 "Assets/Scripts/CameraController.cs"
-"Assets/Scripts/CharacterAmmoDamage.cs"
-"Assets/Scripts/CharacterMovement.cs"
+"Assets/Scripts/Character/BulletController.cs"
+"Assets/Scripts/Character/CharacterAmmoDamage.cs"
+"Assets/Scripts/Character/CharacterAttributes.cs"
+"Assets/Scripts/Character/CharacterMovement.cs"
+"Assets/Scripts/Character/CharacterShooting.cs"
+"Assets/Scripts/Character/PlayerController.cs"
 "Assets/Scripts/Data.cs"
 "Assets/Scripts/Enemies/AgentBlueRoseController.cs"
 "Assets/Scripts/Enemies/AgentBulletController.cs"
@@ -369,9 +372,8 @@
 "Assets/Scripts/Enemies/EnemyMovement.cs"
 "Assets/Scripts/InputController.cs"
 "Assets/Scripts/Observer.cs"
-"Assets/Scripts/PlayerController.cs"
-"Assets/Scripts/Shooting.cs"
 "Assets/Scripts/Snowball.cs"
+"Assets/Scripts/UI/UIController.cs"
 -langversion:9.0
 
 /deterministic

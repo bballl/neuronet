@@ -6,10 +6,10 @@ public class AgentRedController : Enemy
     {
         BasisInit();
 
-
         Speed = Data.AgentRedSpeed;
         Defense = Data.AgentRedDefense;
-        
+        ContactDamage= Data.AgentRedContactDamage;
+        Experience= Data.AgentRedExperience;
         
         //EnemyMovement = new EnemyMovement(rb, transform, Speed);
     }

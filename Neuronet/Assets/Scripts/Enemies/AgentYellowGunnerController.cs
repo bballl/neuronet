@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AgentYellowGunnerController : AgentGunner
@@ -10,6 +9,8 @@ public class AgentYellowGunnerController : AgentGunner
     {
         Speed = Data.AgentYellowGunnerSpeed;
         Defense = Data.AgentYellowGunnerDefense;
+        ContactDamage = Data.AgentYellowGunnerContactDamage;
+        Experience = Data.AgentYellowGunnerExperience;
 
         BasisInit();
         GetAllWayPoints();

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AgentOrangeGunnerController : AgentGunner
@@ -11,6 +10,8 @@ public class AgentOrangeGunnerController : AgentGunner
     {
         Speed = Data.AgentYellowGunnerSpeed;
         Defense = Data.AgentYellowGunnerDefense;
+        ContactDamage = Data.AgentOrangewGunnerContactDamage;
+        Experience = Data.AgentOrangewGunnerExperience;
 
         BasisInit();
         GetAllWayPoints();
@@ -39,9 +40,7 @@ public class AgentOrangeGunnerController : AgentGunner
     {
         CurrentState++;
         if (CurrentState > AgentGunnerState.Shooting)
-        {
             CurrentState = 0;
-        }
 
         switch (CurrentState)
         {

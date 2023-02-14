@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
@@ -6,14 +5,22 @@ public abstract class Enemy : MonoBehaviour
     protected EnemyMovement EnemyMovement;
     protected Rigidbody Rb;
     protected Transform PlayerTransform;
-    protected int Defense;
+
     protected float Speed;
+    protected int Defense;
+    protected int ContactDamage;
+    protected int Experience;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("CharacterAmmo"))
         {
             DamageCalculation();
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            Observer.TakingDamage.Invoke(ContactDamage);
+            Destroy(gameObject);
         }
     }
 

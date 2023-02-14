@@ -59,23 +59,25 @@
     <Compile Include="Assets\Scripts\Enemies\AgentOrangeGunnerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentGunner.cs" />
     <Compile Include="Assets\Scripts\Data.cs" />
-    <Compile Include="Assets\Scripts\CharacterAmmoDamage.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterAmmoDamage.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Observer.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentGunnerState.cs" />
-    <Compile Include="Assets\Scripts\BulletController.cs" />
+    <Compile Include="Assets\Scripts\Character\BulletController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentYellowBlueController.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
-    <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Snowball.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentRedController.cs" />
     <Compile Include="Assets\Scripts\InputController.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentYellowGunnerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentBulletController.cs" />
-    <Compile Include="Assets\Scripts\Shooting.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentBlueRoseController.cs" />
+    <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterAttributes.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterShooting.cs" />
+    <Compile Include="Assets\Scripts\UI\UIController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
