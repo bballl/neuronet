@@ -67,11 +67,14 @@
     <Compile Include="Assets\Scripts\Enemies\AgentRedController.cs" />
     <Compile Include="Assets\Scripts\InputController.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Enemies\AgentGunnerController.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AgentYellowGunnerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentBulletController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentTimer.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AgentGunnerState.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AgentGunner.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AgentOrangeGunnerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -13,9 +13,12 @@
     public static readonly int AgentRedDefense = 15;
     public static readonly float AgentRedSpeed = 3f;
     
-    public static readonly int AgentYellowBlueDefense = 150;
+    public static readonly int AgentYellowBlueDefense = 50;
     public static readonly float AgentYellowBlueSpeed = 2f;
 
-    public static readonly int AgentGunnerDefense = 15;
-    public static readonly float AgentGunnerSpeed = 2;
+    public static readonly int AgentYellowGunnerDefense = 25;
+    public static readonly float AgentYellowGunnerSpeed = 12.7f;
+
+    public static readonly int AgentOrangeGunnerDefense = 15;
+    public static readonly float AgentOrangewGunnerSpeed = 13.7f;
 }
