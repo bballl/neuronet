@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6355277054270826158}
   - component: {fileID: 6355277054270826152}
   - component: {fileID: 6355277054270826159}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: AgentBulletParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 6355277055642571496}
   - component: {fileID: -4834594149114160577}
   - component: {fileID: -1807650540001468730}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: AgentBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4907,7 +4907,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6355277055642571503}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

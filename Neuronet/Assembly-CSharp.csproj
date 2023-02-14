@@ -56,9 +56,13 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemies\AgentOrangeGunnerController.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AgentGunner.cs" />
     <Compile Include="Assets\Scripts\Data.cs" />
     <Compile Include="Assets\Scripts\CharacterAmmoDamage.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Observer.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AgentGunnerState.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentYellowBlueController.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
@@ -69,12 +73,9 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentYellowGunnerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentBulletController.cs" />
-    <Compile Include="Assets\Scripts\Enemies\AgentTimer.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Enemies\AgentGunnerState.cs" />
-    <Compile Include="Assets\Scripts\Enemies\AgentGunner.cs" />
-    <Compile Include="Assets\Scripts\Enemies\AgentOrangeGunnerController.cs" />
+    <Compile Include="Assets\Scripts\Enemies\AgentBlueRoseController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

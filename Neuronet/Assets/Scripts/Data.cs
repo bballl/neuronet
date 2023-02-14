@@ -16,9 +16,17 @@
     public static readonly int AgentYellowBlueDefense = 50;
     public static readonly float AgentYellowBlueSpeed = 2f;
 
+    public static readonly int AgentBlueRoseDefense = 10;
+    public static readonly float AgentBlueRoseSpeed = 4f;
+    
+
     public static readonly int AgentYellowGunnerDefense = 25;
     public static readonly float AgentYellowGunnerSpeed = 12.7f;
 
     public static readonly int AgentOrangeGunnerDefense = 15;
     public static readonly float AgentOrangewGunnerSpeed = 13.7f;
+
+    //оружие противников
+    public static readonly int AgentBulletSpeed = 20;
+    public static readonly int AgentBulletDefaultDamage = 5;
 }

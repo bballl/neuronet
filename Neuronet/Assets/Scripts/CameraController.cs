@@ -32,6 +32,8 @@ public class CameraController : MonoBehaviour
         offset = Vector3.zero;
     }
 
+
+
     private void OnDestroy()
     {
         //Observer.ObstracleContact -= Stop;

@@ -44,27 +44,23 @@ public class AgentYellowGunnerController : AgentGunner
         switch (CurrentState)
         {
             case AgentGunnerState.None:
-                Debug.Log("None");
                 WaitTime = 1f;
                 StartCoroutine(Delay());
                 break;
 
             case AgentGunnerState.Move:
-                Debug.Log("Move");
                 GetNewDirection();
                 WaitTime = 5f;
                 StartCoroutine(Delay());
                 break;
 
             case AgentGunnerState.GunGuidance:
-                Debug.Log("GunGuidance");
                 transform.LookAt(PlayerTransform);
                 WaitTime = 0.35f;
                 StartCoroutine(Delay());
                 break;
 
             case AgentGunnerState.Shooting:
-                Debug.Log("Shooting");
                 Shot();
                 WaitTime = 1f;
                 StartCoroutine(Delay());

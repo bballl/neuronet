@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
 
         inputController = new InputController();
         characterMovement = new CharacterMovement(transform, rb);
+
+        Observer.TakingDamage += GetDamage;
         
         
     }
@@ -43,5 +45,16 @@ public class PlayerController : MonoBehaviour
         if (inputController.GetFireButtonFirst())
             new Shooting(startBulletPositionLeft, startBulletPositionRight, bulletStartParticleSystem);
     }
-    
+
+    private void GetDamage(int damage)
+    {
+
+        Debug.Log($"Получен урон {damage}");
+    }
+
+    private void OnDestroy()
+    {
+        Observer.TakingDamage -= GetDamage;
+    }
+
 }
