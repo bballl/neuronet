@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\Character\BulletController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentYellowBlueController.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\MenuAndUI\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\MenuAndUI\MenuText.cs" />
     <Compile Include="Assets\Scripts\MenuAndUI\UIController.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Snowball.cs" />

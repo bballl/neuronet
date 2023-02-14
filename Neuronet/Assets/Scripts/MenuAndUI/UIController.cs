@@ -27,7 +27,7 @@ public class UIController : MonoBehaviour
     private void ChangeDataView()
     {
         defenseValueText.text = "Защита: " + CharacterAttributes.defense.ToString();
-        experienceValueText.text = "Защита: " + CharacterAttributes.experience.ToString();
+        experienceValueText.text = "Опыт: " + CharacterAttributes.experience.ToString();
     }
 
     private void OnDestroy()

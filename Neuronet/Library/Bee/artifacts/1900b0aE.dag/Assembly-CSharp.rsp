@@ -371,6 +371,8 @@
 "Assets/Scripts/Enemies/Enemy.cs"
 "Assets/Scripts/Enemies/EnemyMovement.cs"
 "Assets/Scripts/InputController.cs"
+"Assets/Scripts/MenuAndUI/MainMenuController.cs"
+"Assets/Scripts/MenuAndUI/MenuText.cs"
 "Assets/Scripts/MenuAndUI/UIController.cs"
 "Assets/Scripts/Observer.cs"
 "Assets/Scripts/Snowball.cs"
