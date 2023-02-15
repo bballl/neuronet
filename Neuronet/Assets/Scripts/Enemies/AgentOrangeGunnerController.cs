@@ -20,8 +20,7 @@ public class AgentOrangeGunnerController : AgentGunner
 
     private void FixedUpdate()
     {
-        if (CurrentState == AgentGunnerState.Move)
-            MoveToWayPoint();
+        MoveToWayPoint();
     }
 
     /// <summary>

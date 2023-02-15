@@ -7,7 +7,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private GameObject TextPanel;
     
     [SerializeField] private Button prologButton;
-    [SerializeField] private Button gameButton;
+    [SerializeField] private Button startGameButton;
     [SerializeField] private Button controlButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private Button backButton;
@@ -21,6 +21,7 @@ public class MainMenuController : MonoBehaviour
         
         prologButton.onClick.AddListener(() => OpenTextPanel(MenuText.PrologText));
         controlButton.onClick.AddListener(() => OpenTextPanel(MenuText.ControlText));
+        startGameButton.onClick.AddListener(() => StartGame());
         exitButton.onClick.AddListener(() => Exit());
         backButton.onClick.AddListener(() => BackToMainMenu());
     }
@@ -34,6 +35,14 @@ public class MainMenuController : MonoBehaviour
         TextPanel.SetActive(true);
         backButton.gameObject.SetActive(true);
         textPanelText.text = text;
+    }
+
+    /// <summary>
+    /// Переход к сцене GameLevel.
+    /// </summary>
+    private void StartGame()
+    {
+        new ChangeScene().LoadScene((int)Scenes.GameLevel);
     }
 
     /// <summary>

@@ -14,20 +14,20 @@ internal struct Data
     public static readonly int BulletDefaultDamage = 5;
 
     //противники
-    public static readonly float AgentRedSpeed = 3f;
-    public static readonly int AgentRedDefense = 15;
-    public static readonly int AgentRedContactDamage = 2;
-    public static readonly int AgentRedExperience = 1;
-    
     public static readonly float AgentYellowBlueSpeed = 2f;
     public static readonly int AgentYellowBlueDefense = 50;
     public static readonly int AgentYellowBlueContactDamage = 3;
     public static readonly int AgentYellowBlueExperience = 2;
 
-    public static readonly float AgentBlueRoseSpeed = 5f;
+    public static readonly float AgentBlueRoseSpeed = 4.5f;
     public static readonly int AgentBlueRoseDefense = 10;
     public static readonly int AgentBlueRoseContactDamage = 1;
     public static readonly int AgentBlueRoseExperience = 1;
+
+    public static readonly float AgentLilacSpeed = 3f;
+    public static readonly int AgentLilacDefense = 21;
+    public static readonly int AgentLilacContactDamage = 1;
+    public static readonly int AgentLilacExperience = 1;
 
     public static readonly float AgentYellowGunnerSpeed = 12.7f;
     public static readonly int AgentYellowGunnerDefense = 25;
@@ -42,4 +42,9 @@ internal struct Data
     //снаряды противников
     public static readonly int AgentBulletSpeed = 20;
     public static readonly int AgentBulletDefaultDamage = 5;
+
+    //spawn
+    public static readonly float SpawnWaitTime = 2.5f;
+    public static readonly float SpawnMinTime = 0.3f;
+    public static readonly float SpawnTimeReduction = 0.002f;
 }

@@ -1063,7 +1063,7 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 65843155}
   TextPanel: {fileID: 974114953}
   prologButton: {fileID: 1700636229}
-  gameButton: {fileID: 1269890668}
+  startGameButton: {fileID: 1269890668}
   controlButton: {fileID: 1749849370}
   exitButton: {fileID: 489630142}
   backButton: {fileID: 1018604997}
@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 1269890669}
   - component: {fileID: 1269890668}
   m_Layer: 5
-  m_Name: GameButton
+  m_Name: StartGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1836,7 +1836,7 @@ GameObject:
   - component: {fileID: 1813014754}
   - component: {fileID: 1813014753}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MainMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

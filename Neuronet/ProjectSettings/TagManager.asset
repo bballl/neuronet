@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CharacterAmmo
   - WayPoint
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

@@ -44,7 +44,8 @@ public abstract class AgentGunner : Enemy
     /// </summary>
     protected virtual void MoveToWayPoint()
     {
-        Rb.AddForce(transform.forward * Time.deltaTime * Speed, ForceMode.Impulse);
+        if (CurrentState == AgentGunnerState.Move)
+            Rb.AddForce(transform.forward * Time.deltaTime * Speed, ForceMode.Impulse);
     }
 
 

@@ -6,4 +6,9 @@
     {
         return currentDamageValue;
     }
+
+    internal static void SetDamageValue(int value)
+    {
+        currentDamageValue = value;
+    }
 }

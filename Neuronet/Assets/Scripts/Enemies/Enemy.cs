@@ -17,7 +17,8 @@ public abstract class Enemy : MonoBehaviour
         {
             DamageCalculation();
         }
-        else if (collision.gameObject.CompareTag("Player"))
+        
+        if (collision.gameObject.CompareTag("Player"))
         {
             Observer.DamageReceived.Invoke(ContactDamage);
             Destroy(gameObject);
@@ -55,6 +56,5 @@ public abstract class Enemy : MonoBehaviour
             Observer.ExperienceReceived.Invoke(Experience);
             Destroy(gameObject);
         }
-            
     }
 }

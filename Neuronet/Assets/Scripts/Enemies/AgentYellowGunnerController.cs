@@ -19,8 +19,7 @@ public class AgentYellowGunnerController : AgentGunner
 
     private void FixedUpdate()
     {
-        if (CurrentState == AgentGunnerState.Move)
-            MoveToWayPoint();
+        MoveToWayPoint();
     }
 
     /// <summary>
@@ -74,9 +73,4 @@ public class AgentYellowGunnerController : AgentGunner
         yield return new WaitForSeconds(WaitTime);
         ChangeState();
     }
-    
-    //private void OnDestroy()
-    //{
-    //    StopAllCoroutines();
-    //}
 }
