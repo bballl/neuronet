@@ -14,7 +14,7 @@ public class AgentBulletController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             int damage = Data.AgentBulletDefaultDamage;
-            Observer.DamageReceived.Invoke(damage);
+            Observer.DamageReceivedEvent.Invoke(damage);
         }
 
         ActivateDestroyParticleSystem();

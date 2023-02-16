@@ -20,7 +20,7 @@ public abstract class Enemy : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Player"))
         {
-            Observer.DamageReceived.Invoke(ContactDamage);
+            Observer.DamageReceivedEvent.Invoke(ContactDamage);
             GameObjectDestroy();
         }
     }
@@ -48,12 +48,12 @@ public abstract class Enemy : MonoBehaviour
     /// </summary>
     private void DamageCalculation()
     {
-        var damage = CharacterAmmoDamage.GetDamage();
+        var damage = CharacterCurrentData.GetDamage();
         Defense -= damage;
 
         if (Defense <= 0)
         {
-            Observer.ExperienceReceived.Invoke(Experience);
+            Observer.ExperienceReceivedEvent.Invoke(Experience);
             GameObjectDestroy();
         }
     }

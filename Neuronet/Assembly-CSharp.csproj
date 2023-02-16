@@ -60,7 +60,6 @@
     <Compile Include="Assets\Scripts\Enemies\AgentGunner.cs" />
     <Compile Include="Assets\Scripts\Data.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentLilacController.cs" />
-    <Compile Include="Assets\Scripts\Character\CharacterAmmoDamage.cs" />
     <Compile Include="Assets\Scripts\Scenes.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Observer.cs" />
@@ -84,6 +83,10 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyType.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\SpawnController.cs" />
+    <Compile Include="Assets\Scripts\MenuAndUI\ResultGameMenuController.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterCurrentData.cs" />
+    <Compile Include="Assets\Scripts\EndGameController.cs" />
+    <Compile Include="Assets\Scripts\GameSessionResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

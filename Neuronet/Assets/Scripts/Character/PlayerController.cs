@@ -21,13 +21,18 @@ public class PlayerController : MonoBehaviour
         inputController = new InputController();
         characterMovement = new CharacterMovement(transform, rb);
 
-        Observer.DamageReceived += GetDamage;
-        Observer.ExperienceReceived += GetExperience;
+        Observer.DamageReceivedEvent += GetDamage;
+        Observer.ExperienceReceivedEvent += GetExperience;
     }
     void Update()
     {
         characterMovement.Move(); //какой вариант лучше?
         Shooting();
+    }
+
+    private void OnDestroy()
+    {
+        Observer.DamageReceivedEvent -= GetDamage;
     }
 
     /// <summary>
@@ -45,18 +50,18 @@ public class PlayerController : MonoBehaviour
     private void GetDamage(int damage)
     {
         CharacterAttributes.defense -= damage;
-        Observer.UIDataUpdate.Invoke();
+        Observer.UIDataUpdateEvent.Invoke();
+
+        if (CharacterAttributes.defense <= 0)
+            Observer.EndGameEvent.Invoke(false);
     }
 
+    /// <summary>
+    /// Получение опыта.
+    /// </summary>
     private void GetExperience(int experience)
     {
         CharacterAttributes.experience += experience;
-        Observer.UIDataUpdate.Invoke();
+        Observer.UIDataUpdateEvent.Invoke();
     }
-
-    private void OnDestroy()
-    {
-        Observer.DamageReceived -= GetDamage;
-    }
-
 }

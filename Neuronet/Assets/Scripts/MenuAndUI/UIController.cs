@@ -24,7 +24,7 @@ public class UIController : MonoBehaviour
         menuButton.onClick.AddListener(() => LoadMainMenu());
 
         defenseValueText.text = "Защита: " + Data.CharacterDefense.ToString();
-        Observer.UIDataUpdate += ChangeDataView;
+        Observer.UIDataUpdateEvent += ChangeDataView;
     }
 
     private void Update()
@@ -69,6 +69,6 @@ public class UIController : MonoBehaviour
     
     private void OnDestroy()
     {
-        Observer.UIDataUpdate -= ChangeDataView;
+        Observer.UIDataUpdateEvent -= ChangeDataView;
     }
 }

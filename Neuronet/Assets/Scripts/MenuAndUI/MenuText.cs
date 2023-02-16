@@ -11,5 +11,8 @@
         "Персонаж поворачивается за курсором мышки.\n" +
         "ASWD - перемещение.\n" +
         "ЛКМ - стрельба.\n";
-        //"Esc - меню паузы.";
+
+    public static readonly string ResultWinMenuText = "Игровая сессия окончена.\nВы успешно выполнили задание!";
+    
+    public static readonly string ResultLoseMenuText = "Игровая сессия окончена.\nМиссия провалена.";
 }
