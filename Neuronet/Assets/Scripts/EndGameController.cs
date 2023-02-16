@@ -2,25 +2,23 @@ using UnityEngine;
 
 public class EndGameController : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
+        //задать обнуление атрибутов
+        
         Observer.EndGameEvent += EndGame;
+        CurrentGameSessionTime.time = 0;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        var time = Time.time;
-        if (time > 10)
-        {
-            EndGame(true);
-        }
+        WinTimer();
     }
 
     private void OnDestroy()
     {
         Observer.EndGameEvent -= EndGame;
     }
-
     
     /// <summary>
     /// ќкончание игровой сессии. isGameWin в значении true соответствует победе.
@@ -29,5 +27,16 @@ public class EndGameController : MonoBehaviour
     {
         GameSessionResult.IsGameWin = isGameWin;
         new ChangeScene().LoadScene((int)Scenes.ResultGameMenu);
+    }
+
+    /// <summary>
+    /// “аймер игровой сессии. ѕри достижении заданного времени присуждаетс€ победа.
+    /// </summary>
+    private void WinTimer()
+    {
+        CurrentGameSessionTime.time += Time.deltaTime;
+
+        if (CurrentGameSessionTime.time > Data.GameSessionMaxTime)
+            EndGame(true);
     }
 }

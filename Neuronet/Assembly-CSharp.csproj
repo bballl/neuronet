@@ -70,23 +70,24 @@
     <Compile Include="Assets\Scripts\Enemies\AgentYellowBlueController.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\MenuAndUI\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\GameSessionResult.cs" />
     <Compile Include="Assets\Scripts\MenuAndUI\MenuText.cs" />
     <Compile Include="Assets\Scripts\MenuAndUI\UIController.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
-    <Compile Include="Assets\Scripts\Snowball.cs" />
+    <Compile Include="Assets\Scripts\EndGameController.cs" />
+    <Compile Include="Assets\Scripts\CurrentGameSessionTime.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterAttributes.cs" />
     <Compile Include="Assets\Scripts\InputController.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentYellowGunnerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentBulletController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentBlueRoseController.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterCurrentAttributes.cs" />
+    <Compile Include="Assets\Scripts\MenuAndUI\ResultGameMenuController.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyType.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterAbility.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\SpawnController.cs" />
-    <Compile Include="Assets\Scripts\MenuAndUI\ResultGameMenuController.cs" />
-    <Compile Include="Assets\Scripts\Character\CharacterCurrentData.cs" />
-    <Compile Include="Assets\Scripts\EndGameController.cs" />
-    <Compile Include="Assets\Scripts\GameSessionResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

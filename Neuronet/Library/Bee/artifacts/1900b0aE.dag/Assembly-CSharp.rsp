@@ -355,11 +355,13 @@
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/ChangeScene.cs"
 "Assets/Scripts/Character/BulletController.cs"
+"Assets/Scripts/Character/CharacterAbility.cs"
 "Assets/Scripts/Character/CharacterAttributes.cs"
-"Assets/Scripts/Character/CharacterCurrentData.cs"
+"Assets/Scripts/Character/CharacterCurrentAttributes.cs"
 "Assets/Scripts/Character/CharacterMovement.cs"
 "Assets/Scripts/Character/CharacterShooting.cs"
 "Assets/Scripts/Character/PlayerController.cs"
+"Assets/Scripts/CurrentGameSessionTime.cs"
 "Assets/Scripts/Data.cs"
 "Assets/Scripts/EndGameController.cs"
 "Assets/Scripts/Enemies/AgentBlueRoseController.cs"
@@ -382,7 +384,6 @@
 "Assets/Scripts/MenuAndUI/UIController.cs"
 "Assets/Scripts/Observer.cs"
 "Assets/Scripts/Scenes.cs"
-"Assets/Scripts/Snowball.cs"
 -langversion:9.0
 
 /deterministic

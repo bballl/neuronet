@@ -27,9 +27,9 @@ public class UIController : MonoBehaviour
         Observer.UIDataUpdateEvent += ChangeDataView;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        timerText.text = Mathf.Round(Time.time).ToString();
+        timerText.text = Mathf.Round(CurrentGameSessionTime.time).ToString();
     }
 
     /// <summary>

@@ -25,4 +25,7 @@ internal struct Observer
     /// Наблюдатель. Отслеживает момент окончания игровой сессии. Значение bool == true соответствует успешному прохождению игрового уровня.
     /// </summary>
     internal static Action<bool> EndGameEvent;
+    
+    
+    internal static Action CharacterExtraDefenseEvent;
 }

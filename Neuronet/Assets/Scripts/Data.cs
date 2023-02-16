@@ -6,7 +6,7 @@ internal struct Data
     //персонаж
     public static readonly float CharacterRotationSpeed = 10f;
     public static readonly int CharacterSpeed = 5;
-    public static readonly int CharacterDefense = 50;
+    public static readonly int CharacterDefense = 200;
 
     //оружие
     public static readonly float BulletLifeTime = 0.5f; //?
@@ -47,4 +47,7 @@ internal struct Data
     public static readonly float SpawnWaitTime = 2.5f;
     public static readonly float SpawnMinTime = 0.3f;
     public static readonly float SpawnTimeReduction = 0.003f;
+
+    //игровая сессия
+    public static readonly float GameSessionMaxTime = 30f;
 }

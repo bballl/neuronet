@@ -34,14 +34,4 @@ internal class InputController
     {
         return Input.GetButtonDown("Fire2");
     }
-
-    //public bool GetJumpButtonAlt()
-    //{
-    //    var jumpButton = Input.GetAxis("Jump");
-
-    //    if (jumpButton > 0)
-    //        return true;
-    //    else
-    //        return false;
-    //}
 }

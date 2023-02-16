@@ -48,7 +48,7 @@ public abstract class Enemy : MonoBehaviour
     /// </summary>
     private void DamageCalculation()
     {
-        var damage = CharacterCurrentData.GetDamage();
+        var damage = CharacterCurrentAttributes.currentDamageValue;
         Defense -= damage;
 
         if (Defense <= 0)

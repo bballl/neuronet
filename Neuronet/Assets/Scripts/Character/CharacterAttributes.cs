@@ -1,4 +1,7 @@
-﻿internal struct CharacterAttributes
+﻿/// <summary>
+/// Текущие значения параметров персонажа.
+/// </summary>
+internal struct CharacterAttributes
 {
     internal static float rotationSpeed = Data.CharacterRotationSpeed;
     internal static int speed = Data.CharacterSpeed;
