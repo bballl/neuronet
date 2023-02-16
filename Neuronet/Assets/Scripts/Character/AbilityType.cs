@@ -5,5 +5,6 @@ internal enum AbilityType
 {
     ExtraDefense,
     ExtraDamage,
-    Regeneration
+    Regeneration,
+    QuckFind
 }

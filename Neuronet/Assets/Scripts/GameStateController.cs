@@ -1,13 +1,11 @@
 using UnityEngine;
 
-public class EndGameController : MonoBehaviour
+public class GameStateController : MonoBehaviour
 {
     private void Start()
     {
-        //задать обнуление атрибутов
-        
+        CharacterAttributes.SetDefaultAttributesValues();
         Observer.EndGameEvent += EndGame;
-        CurrentGameSessionTime.time = 0;
     }
 
     private void FixedUpdate()
@@ -34,9 +32,12 @@ public class EndGameController : MonoBehaviour
     /// </summary>
     private void WinTimer()
     {
-        CurrentGameSessionTime.time += Time.deltaTime;
+        CurrentGameSessionTime.time -= Time.deltaTime;
 
-        if (CurrentGameSessionTime.time > Data.GameSessionMaxTime)
+        if (CharacterAttributes.isQuickFind)
+            CurrentGameSessionTime.time -= Data.QuickFindValue;
+
+        if (CurrentGameSessionTime.time <= 0)
             EndGame(true);
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +18,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private Button extraDefenseAbilityButton;
     [SerializeField] private Button extraDamageAbilityButton;
     [SerializeField] private Button regenerationAbilityButton;
+    [SerializeField] private Button quickFindAbilityButton;
 
     private bool isStartingAbilitySelection;
 
@@ -35,6 +34,7 @@ public class UIController : MonoBehaviour
         extraDefenseAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.ExtraDefense));
         extraDamageAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.ExtraDamage));
         regenerationAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.Regeneration));
+        quickFindAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.QuckFind));
 
         Observer.UIDataUpdateEvent += ChangeDataView;
         Observer.AbilitySelectionEvent += OpenAbilitiesPanel;
@@ -113,20 +113,23 @@ public class UIController : MonoBehaviour
         {
             case AbilityType.ExtraDefense:
                 extraDefenseAbilityButton.onClick.RemoveAllListeners();
-                extraDefenseAbilityButton.GetComponentInChildren<Text>().text = "Использовано";
+                extraDefenseAbilityButton.GetComponentInChildren<Text>().text = "Выбрано";
                 break;
 
             case AbilityType.ExtraDamage:
                 extraDamageAbilityButton.onClick.RemoveAllListeners();
-                extraDamageAbilityButton.GetComponentInChildren<Text>().text = "Использовано";
+                extraDamageAbilityButton.GetComponentInChildren<Text>().text = "Выбрано";
                 break;
 
             case AbilityType.Regeneration:
                 regenerationAbilityButton.onClick.RemoveAllListeners();
-                regenerationAbilityButton.GetComponentInChildren<Text>().text = "Использовано";
+                regenerationAbilityButton.GetComponentInChildren<Text>().text = "Выбрано";
                 break;
 
-            
+            case AbilityType.QuckFind:
+                quickFindAbilityButton.onClick.RemoveAllListeners();
+                quickFindAbilityButton.GetComponentInChildren<Text>().text = "Выбрано";
+                break;
         }
     }
 

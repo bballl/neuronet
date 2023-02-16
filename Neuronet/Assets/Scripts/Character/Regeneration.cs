@@ -19,7 +19,6 @@ internal class Regeneration
         {
             var value = Random.Range(0, maxValue + 1);
 
-            Debug.Log($"value = {value}");
             if (value == maxValue)
                 return true;
             else
@@ -43,8 +42,6 @@ internal class Regeneration
         else
         {
             currentTime = 0;
-
-            Debug.Log("Таймер обнулен");
             return true;
         }
             

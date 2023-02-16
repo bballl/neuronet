@@ -3,5 +3,5 @@
 /// </summary>
 internal struct CurrentGameSessionTime
 {
-    internal static float time;
+    internal static float time = Data.GameSessionMaxTime;
 }

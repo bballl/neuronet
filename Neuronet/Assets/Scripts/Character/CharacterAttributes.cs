@@ -6,10 +6,25 @@
     internal static int damageValue = Data.BulletDefaultDamage;
     internal static int experience;
     internal static bool isRegeneration;
+    internal static bool isQuickFind;
 
     static CharacterAttributes()
     {
         Observer.AbilitiyApplyEvent += AbilityApply;
+    }
+    
+    /// <summary>
+    /// Присвоение дефолтных значение характеристикам персонажа.
+    /// </summary>
+    internal static void SetDefaultAttributesValues()
+    {
+        rotationSpeed = Data.CharacterRotationSpeed;
+        speed = Data.CharacterSpeed;
+        defense = Data.CharacterDefense;
+        damageValue = Data.BulletDefaultDamage;
+        experience = 0;
+        isRegeneration = false;
+        isQuickFind = false;
     }
     
     internal static int GetDamageValue()
@@ -34,6 +49,10 @@
 
             case AbilityType.Regeneration:
                 isRegeneration = true;
+                break;
+
+            case AbilityType.QuckFind:
+                isQuickFind = true;
                 break;
         }
     }

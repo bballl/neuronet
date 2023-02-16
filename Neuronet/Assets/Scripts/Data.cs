@@ -51,6 +51,7 @@ internal struct Data
     public static readonly int ExtraDefense = 50;
     public static readonly int ExtraDamage = 2;
     public static readonly int RegenerationValue = 2;
+    public static readonly float QuickFindValue = 0.005f;
 
     //игровая сессия
     public static readonly float GameSessionMaxTime = 650f;
