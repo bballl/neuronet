@@ -21,7 +21,7 @@ public abstract class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Observer.DamageReceived.Invoke(ContactDamage);
-            Destroy(gameObject);
+            GameObjectDestroy();
         }
     }
 
@@ -54,7 +54,26 @@ public abstract class Enemy : MonoBehaviour
         if (Defense <= 0)
         {
             Observer.ExperienceReceived.Invoke(Experience);
-            Destroy(gameObject);
+            GameObjectDestroy();
         }
+    }
+
+    /// <summary>
+    /// Уничтожение агента.
+    /// </summary>
+    private void GameObjectDestroy()
+    {
+        ActivateDestroyParticleSystem();
+        Destroy(gameObject);
+    }
+    
+    /// <summary>
+    /// Активация эффекта взрыва.
+    /// </summary>
+    private void ActivateDestroyParticleSystem()
+    {
+        var particleSystem = GameObject.Instantiate(Resources.Load<ParticleSystem>("AgentBulletDestroyParticleSystem"), 
+            transform.position, Quaternion.identity);
+        particleSystem.Play();
     }
 }

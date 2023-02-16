@@ -17,6 +17,16 @@ public class AgentBulletController : MonoBehaviour
             Observer.DamageReceived.Invoke(damage);
         }
 
+        ActivateDestroyParticleSystem();
         Destroy(gameObject);
+    }
+
+    /// <summary>
+    /// Активация эффекта взрыва.
+    /// </summary>
+    private void ActivateDestroyParticleSystem()
+    {
+        var ps = GameObject.Instantiate(Resources.Load<ParticleSystem>("AgentBulletDestroyParticleSystem"), transform.position, Quaternion.identity);
+        ps.Play();
     }
 }

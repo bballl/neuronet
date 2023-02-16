@@ -46,5 +46,5 @@ internal struct Data
     //spawn
     public static readonly float SpawnWaitTime = 2.5f;
     public static readonly float SpawnMinTime = 0.3f;
-    public static readonly float SpawnTimeReduction = 0.002f;
+    public static readonly float SpawnTimeReduction = 0.003f;
 }
