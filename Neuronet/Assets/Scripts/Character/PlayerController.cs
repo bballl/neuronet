@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private ParticleSystem[] bulletStartParticleSystem;
+    private AudioSource audioSource;
     private CharacterMovement characterMovement;
     private InputController inputController;
     private Regeneration regeneration;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         bulletStartParticleSystem = GetComponentsInChildren<ParticleSystem>();
         
         inputController = new InputController();
@@ -49,7 +51,11 @@ public class PlayerController : MonoBehaviour
     private void Shooting()
     {
         if (inputController.GetFireButtonFirst())
+        {
             new CharacterShooting(startBulletPositionLeft, startBulletPositionRight, bulletStartParticleSystem);
+            audioSource.Play();
+        }
+            
     }
 
     /// <summary>
