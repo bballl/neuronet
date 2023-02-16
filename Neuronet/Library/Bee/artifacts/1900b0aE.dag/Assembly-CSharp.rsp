@@ -383,6 +383,7 @@
 "Assets/Scripts/MenuAndUI/MenuText.cs"
 "Assets/Scripts/MenuAndUI/ResultGameMenuController.cs"
 "Assets/Scripts/MenuAndUI/UIController.cs"
+"Assets/Scripts/MusicPlayer.cs"
 "Assets/Scripts/Observer.cs"
 "Assets/Scripts/Scenes.cs"
 -langversion:9.0

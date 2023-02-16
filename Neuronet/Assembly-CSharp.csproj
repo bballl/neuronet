@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemies\AgentOrangeGunnerController.cs" />
+    <Compile Include="Assets\Scripts\Character\Regeneration.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentGunner.cs" />
     <Compile Include="Assets\Scripts\Data.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentLilacController.cs" />
@@ -88,7 +89,7 @@
     <Compile Include="Assets\Scripts\Character\AbilityType.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\SpawnController.cs" />
-    <Compile Include="Assets\Scripts\Character\Regeneration.cs" />
+    <Compile Include="Assets\Scripts\MusicPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

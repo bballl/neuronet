@@ -45,7 +45,7 @@ internal struct Data
     //spawn
     public static readonly float SpawnWaitTime = 2.5f;
     public static readonly float SpawnMinTime = 0.3f;
-    public static readonly float SpawnTimeReduction = 0.003f;
+    public static readonly float SpawnTimeReduction = 0.005f;
 
     //способности персонажа
     public static readonly int ExtraDefense = 50;
@@ -53,5 +53,5 @@ internal struct Data
     public static readonly int RegenerationValue = 2;
 
     //игровая сессия
-    public static readonly float GameSessionMaxTime = 30f;
+    public static readonly float GameSessionMaxTime = 650f;
 }
