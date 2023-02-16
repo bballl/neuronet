@@ -81,13 +81,14 @@
     <Compile Include="Assets\Scripts\Enemies\AgentYellowGunnerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentBulletController.cs" />
     <Compile Include="Assets\Scripts\Enemies\AgentBlueRoseController.cs" />
-    <Compile Include="Assets\Scripts\Character\CharacterCurrentAttributes.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterAttributes.cs" />
     <Compile Include="Assets\Scripts\MenuAndUI\ResultGameMenuController.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyType.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterAbility.cs" />
     <Compile Include="Assets\Scripts\Character\AbilityType.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Enemies\SpawnController.cs" />
+    <Compile Include="Assets\Scripts\Character\Regeneration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

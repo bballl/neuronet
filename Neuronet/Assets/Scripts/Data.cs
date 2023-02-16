@@ -50,6 +50,7 @@ internal struct Data
     //способности персонажа
     public static readonly int ExtraDefense = 50;
     public static readonly int ExtraDamage = 2;
+    public static readonly int RegenerationValue = 2;
 
     //игровая сессия
     public static readonly float GameSessionMaxTime = 30f;

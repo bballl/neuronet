@@ -67,8 +67,8 @@ public class UIController : MonoBehaviour
     /// </summary>
     private void ChangeDataView()
     {
-        defenseValueText.text = "Защита: " + CharacterCurrentAttributes.defense.ToString();
-        experienceValueText.text = "Опыт: " + CharacterCurrentAttributes.experience.ToString();
+        defenseValueText.text = "Защита: " + CharacterAttributes.defense.ToString();
+        experienceValueText.text = "Опыт: " + CharacterAttributes.experience.ToString();
     }
 
     /// <summary>
@@ -122,7 +122,8 @@ public class UIController : MonoBehaviour
                 break;
 
             case AbilityType.Regeneration:
-                
+                regenerationAbilityButton.onClick.RemoveAllListeners();
+                regenerationAbilityButton.GetComponentInChildren<Text>().text = "Использовано";
                 break;
 
             

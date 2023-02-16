@@ -27,7 +27,7 @@ public class SpawnController : MonoBehaviour
         coroutine = null; // перестраховываемся, чтобы не плодить короутины
         coroutine = StartCoroutine(SpawnStart());
 
-        Debug.Log($"spawnWaitTime: {spawnWaitTime}");
+        //Debug.Log($"spawnWaitTime: {spawnWaitTime}");
     }
 
     /// <summary>

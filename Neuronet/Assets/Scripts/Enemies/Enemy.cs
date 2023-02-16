@@ -48,7 +48,7 @@ public abstract class Enemy : MonoBehaviour
     /// </summary>
     private void DamageCalculation()
     {
-        var damage = CharacterCurrentAttributes.damageValue;
+        var damage = CharacterAttributes.damageValue;
         Defense -= damage;
 
         if (Defense <= 0)
