@@ -26,7 +26,12 @@ internal struct Observer
     internal static Action<bool> EndGameEvent;
 
     /// <summary>
+    /// Наблюдатель. Отслеживает момент получения возможности выбора новой способности.
+    /// </summary>
+    internal static Action AbilitySelectionEvent;
+
+    /// <summary>
     /// Наблюдатель. Отслеживает момент получения новой способности.
     /// </summary>
-    internal static Action AbilitiesEvent;
+    internal static Action<AbilityType> AbilitiyApplyEvent;
 }

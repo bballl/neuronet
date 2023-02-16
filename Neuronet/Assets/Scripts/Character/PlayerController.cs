@@ -49,10 +49,10 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void GetDamage(int damage)
     {
-        CharacterAttributes.defense -= damage;
+        CharacterCurrentAttributes.defense -= damage;
         Observer.UIDataUpdateEvent.Invoke();
 
-        if (CharacterAttributes.defense <= 0)
+        if (CharacterCurrentAttributes.defense <= 0)
             Observer.EndGameEvent.Invoke(false);
     }
 
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void GetExperience(int experience)
     {
-        CharacterAttributes.experience += experience;
+        CharacterCurrentAttributes.experience += experience;
         Observer.UIDataUpdateEvent.Invoke();
     }
 }

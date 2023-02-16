@@ -5,8 +5,8 @@ internal class CharacterMovement
     private Transform characterTransform;
     private Rigidbody rb;
     private InputController inputController;
-    private int speed = CharacterAttributes.speed;
-    private float rotationSpeed = CharacterAttributes.rotationSpeed;
+    private int speed = CharacterCurrentAttributes.speed;
+    private float rotationSpeed = CharacterCurrentAttributes.rotationSpeed;
     
     internal CharacterMovement(Transform transform, Rigidbody rigidbody)
     {

@@ -357,7 +357,6 @@
 "Assets/Scripts/Character/AbilityType.cs"
 "Assets/Scripts/Character/BulletController.cs"
 "Assets/Scripts/Character/CharacterAbility.cs"
-"Assets/Scripts/Character/CharacterAttributes.cs"
 "Assets/Scripts/Character/CharacterCurrentAttributes.cs"
 "Assets/Scripts/Character/CharacterMovement.cs"
 "Assets/Scripts/Character/CharacterShooting.cs"

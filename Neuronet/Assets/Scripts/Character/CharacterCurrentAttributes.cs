@@ -3,26 +3,42 @@
     internal static float rotationSpeed = Data.CharacterRotationSpeed;
     internal static int speed = Data.CharacterSpeed;
     internal static int defense = Data.CharacterDefense;
+    internal static int damageValue = Data.BulletDefaultDamage;
     internal static int experience;
-    internal static int currentDamageValue = Data.BulletDefaultDamage;
 
     static CharacterCurrentAttributes()
     {
-        Observer.AbilitiesEvent += ExtraDefense;
+        Observer.AbilitiyApplyEvent += AbilityApply;
     }
     
     internal static int GetDamageValue()
     {
-        return currentDamageValue;
+        return damageValue;
     }
 
-    internal static void SetDamageValue(int value)
+    private static void AbilityApply(AbilityType type)
     {
-        currentDamageValue = value;
+        switch (type)
+        {
+            case AbilityType.ExtraDefense:
+                defense += Data.ExtraDefense;
+                break;
+
+            case AbilityType.ExtraDamage:
+                damageValue += Data.ExtraDamage;
+                break;
+
+            case AbilityType.Regeneration:
+
+                break;
+        }
     }
 
-    private static void ExtraDefense()
+    /// <summary>
+    /// Отписка от делегатов.
+    /// </summary>
+    internal static void Unsubscribe()
     {
-        defense += 100;
+        Observer.AbilitiyApplyEvent -= AbilityApply;
     }
 }

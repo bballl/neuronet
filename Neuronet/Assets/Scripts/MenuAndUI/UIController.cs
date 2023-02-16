@@ -21,6 +21,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private Button extraDamageAbilityButton;
     [SerializeField] private Button regenerationAbilityButton;
 
+    private bool isStartingAbilitySelection;
+
     private void Awake()
     {
         pausePanel.SetActive(false);
@@ -35,9 +37,18 @@ public class UIController : MonoBehaviour
         regenerationAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.Regeneration));
 
         Observer.UIDataUpdateEvent += ChangeDataView;
-        Observer.AbilitiesEvent += OpenAbilitiesPanel;
+        Observer.AbilitySelectionEvent += OpenAbilitiesPanel;
 
         defenseValueText.text = "Защита: " + Data.CharacterDefense.ToString();
+    }
+
+    private void Start()
+    {
+        if (isStartingAbilitySelection == false)
+        {
+            OpenAbilitiesPanel();
+            isStartingAbilitySelection = true;
+        }
     }
 
     private void FixedUpdate()
@@ -48,7 +59,7 @@ public class UIController : MonoBehaviour
     private void OnDestroy()
     {
         Observer.UIDataUpdateEvent -= ChangeDataView;
-        Observer.AbilitiesEvent -= OpenAbilitiesPanel;
+        Observer.AbilitySelectionEvent -= OpenAbilitiesPanel;
     }
 
     /// <summary>
@@ -56,8 +67,8 @@ public class UIController : MonoBehaviour
     /// </summary>
     private void ChangeDataView()
     {
-        defenseValueText.text = "Защита: " + CharacterAttributes.defense.ToString();
-        experienceValueText.text = "Опыт: " + CharacterAttributes.experience.ToString();
+        defenseValueText.text = "Защита: " + CharacterCurrentAttributes.defense.ToString();
+        experienceValueText.text = "Опыт: " + CharacterCurrentAttributes.experience.ToString();
     }
 
     /// <summary>
@@ -96,7 +107,26 @@ public class UIController : MonoBehaviour
     /// </summary>
     private void ChooseAbility(AbilityType type)
     {
+        Observer.AbilitiyApplyEvent.Invoke(type);
 
+        switch (type)
+        {
+            case AbilityType.ExtraDefense:
+                extraDefenseAbilityButton.onClick.RemoveAllListeners();
+                extraDefenseAbilityButton.GetComponentInChildren<Text>().text = "Использовано";
+                break;
+
+            case AbilityType.ExtraDamage:
+                extraDamageAbilityButton.onClick.RemoveAllListeners();
+                extraDamageAbilityButton.GetComponentInChildren<Text>().text = "Использовано";
+                break;
+
+            case AbilityType.Regeneration:
+                
+                break;
+
+            
+        }
     }
 
     /// <summary>
