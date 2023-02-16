@@ -354,6 +354,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/ChangeScene.cs"
+"Assets/Scripts/Character/AbilityType.cs"
 "Assets/Scripts/Character/BulletController.cs"
 "Assets/Scripts/Character/CharacterAbility.cs"
 "Assets/Scripts/Character/CharacterAttributes.cs"

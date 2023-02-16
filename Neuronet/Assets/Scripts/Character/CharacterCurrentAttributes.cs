@@ -8,7 +8,7 @@
 
     static CharacterCurrentAttributes()
     {
-        Observer.CharacterExtraDefenseEvent += ExtraDefense;
+        Observer.AbilitiesEvent += ExtraDefense;
     }
     
     internal static int GetDamageValue()

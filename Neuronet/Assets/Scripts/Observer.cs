@@ -20,12 +20,13 @@ internal struct Observer
     /// </summary>
     internal static Action UIDataUpdateEvent;
 
-
     /// <summary>
     /// Наблюдатель. Отслеживает момент окончания игровой сессии. Значение bool == true соответствует успешному прохождению игрового уровня.
     /// </summary>
     internal static Action<bool> EndGameEvent;
-    
-    
-    internal static Action CharacterExtraDefenseEvent;
+
+    /// <summary>
+    /// Наблюдатель. Отслеживает момент получения новой способности.
+    /// </summary>
+    internal static Action AbilitiesEvent;
 }
